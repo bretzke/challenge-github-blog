@@ -1,12 +1,49 @@
+import { CardIssues } from "./components/CardIssues";
 import { GithubProfile } from "./components/GithubProfile";
 import { SearchIssues } from "./components/SearchIssues";
-import { HomeContainer } from "./styles";
+import { CardsContainer, HomeContainer } from "./styles";
+
+const textTest = `Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures. Wherever possible, comparisons with other languages are drawn.
+
+Dynamic typing
+JavaScript is a loosely typed and dynamic language. Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types:
+
+let foo = 42; // foo is now a number
+foo = 'bar'; // foo is now a string
+foo = true; // foo is now a boolean`;
 
 export function Home() {
   return (
     <HomeContainer>
       <GithubProfile />
       <SearchIssues />
+
+      <CardsContainer>
+        <CardIssues
+          id="1"
+          title="JavaScript data types and data structures"
+          postedIn="Há 1 dia"
+          text={textTest}
+        />
+        <CardIssues
+          id="2"
+          title="JavaScript data types and data structures"
+          postedIn="Há 1 dia"
+          text={textTest}
+        />
+        <CardIssues
+          id="3"
+          title="JavaScript data types and data structures"
+          postedIn="Há 1 dia"
+          text={textTest}
+        />
+        <CardIssues
+          id="4"
+          title="JavaScript data types and data structures"
+          postedIn="Há 1 dia"
+          text={textTest}
+        />
+      </CardsContainer>
     </HomeContainer>
   );
 }
