@@ -29,6 +29,11 @@ export const CardHeader = styled.div`
     line-height: 160%;
     color: ${(props) => props.theme["base-title"]};
     width: 65%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 `;
 
@@ -36,12 +41,8 @@ export const CardContent = styled.div`
   font-size: 16px;
   line-height: 160%;
   color: ${(props) => props.theme["base-text"]};
-  /* height: 112px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;  */
   display: -webkit-box;
-  -webkit-line-clamp: 4; /** número de linhas que você quer exibir */
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;

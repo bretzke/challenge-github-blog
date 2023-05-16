@@ -1,7 +1,8 @@
+import { dateFormatter } from "../../../../utils/formatter";
 import { CardContainer, CardContent, CardHeader } from "./style";
 
 interface CardIssuesProps {
-  id: string;
+  id: number;
   title: string;
   postedIn: string;
   text: string;
@@ -11,7 +12,7 @@ export function CardIssues({ id, title, postedIn, text }: CardIssuesProps) {
     <CardContainer key={id}>
       <CardHeader>
         <h3>{title}</h3>
-        <span>{postedIn}</span>
+        <span>{dateFormatter.format(new Date(postedIn))}</span>
       </CardHeader>
       <CardContent>{text}</CardContent>
     </CardContainer>
